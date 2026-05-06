@@ -2037,13 +2037,14 @@
 
     // Staggered Reveal & Magnetic Effects
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize VanillaTilt for team photos
-      VanillaTilt.init(document.querySelectorAll(".team-photo"), {
-        max: 15,
+      // Initialize VanillaTilt for all key visual elements
+      VanillaTilt.init(document.querySelectorAll(".team-photo, .gallery-item img, .hero-main-img, .resource-card, .about-card"), {
+        max: 10,
         speed: 400,
         glare: true,
-        "max-glare": 0.2,
-        scale: 1.05
+        "max-glare": 0.3,
+        scale: 1.02,
+        perspective: 1000
       });
 
       // Staggered reveal for grids

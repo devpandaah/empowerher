@@ -140,6 +140,12 @@
       transform: translateY(-1px);
     }
 
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -1230,6 +1236,10 @@
         font-size: 18px;
       }
 
+      .nav-right {
+        gap: 10px;
+      }
+
       .mobile-menu-btn {
         display: block;
       }
@@ -1415,13 +1425,6 @@
       <img src="empowerher_t.png" alt="EmpowerHer Logo" class="logo-img">
       EmpowerHer
     </a>
-    <button class="mobile-menu-btn" onclick="toggleMenu()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#pillars">Our Mission</a></li>
@@ -1430,7 +1433,16 @@
       <li><a href="#involve">Get Involved</a></li>
       <li><a href="#resources">Resources</a></li>
     </ul>
-    <a class="nav-cta" href="#involve">Join Us</a>
+    <div class="nav-right">
+      <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <a class="nav-cta" href="#involve">Join Us</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -1607,7 +1619,7 @@
     <div class="events-header reveal">
       <h2 class="section-title">Gallery</h2>
       <h3 class="section-tag">Impact in Action</h3>
-      <p class="section-body" style="margin: 0 auto;">A glimpse into our first awareness round, Kanpur's first
+      <p class="section-body" style="margin: 0 auto;">A glimpse into our first awareness round in 2025, Kanpur's first
         student-led UN Women's 16 Days of Activism against gender-based violence where students
         came together to innovate, spark ideas and drive change.</p>
     </div>

@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
+
+  <!-- Social Sharing Meta Tags -->
+  <meta property="og:title" content="EmpowerHer — Student-Led Awareness Campaign">
+  <meta property="og:description" content="Join us in our mission for gender equality, ending domestic violence, and empowering women worldwide.">
+  <meta property="og:image" content="empowerher.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="empowerher.png">
   <title>EmpowerHer — Student-Led Awareness Campaign</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
@@ -713,7 +721,7 @@
       background: #a02d3d;
     }
 
-    .involve-ways {}
+
 
     .involve-ways h3 {
       font-family: 'Cormorant Garamond', serif;
@@ -1128,6 +1136,23 @@
       animation-delay: 0.55s;
     }
 
+    .team-member {
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    }
+
+    .team-member:hover .team-photo {
+      box-shadow: 0 0 30px #ffc1cc;
+      border-color: var(--blush);
+    }
+
+    .team-name {
+      transition: color 0.3s ease;
+    }
+
+    .team-member:hover .team-name {
+      color: var(--rose);
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .pillar {
@@ -1146,6 +1171,20 @@
 
       .pillar-title {
         font-size: 20px !important;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15px !important;
+      }
+
+      .team-photo {
+        width: 100px !important;
+        height: 100px !important;
+      }
+
+      .team-name {
+        font-size: 13px !important;
       }
 
       header {
@@ -1588,8 +1627,80 @@
         </div>
       </div>
     </div>
-
     <div class="team-section reveal" style="margin-top: 80px;">
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 30px; text-align: center;">
+        2026 BHIS Round Volunteers</h3>
+      <div class="team-grid">
+        <!-- Heads First -->
+        <div class="team-member">
+          <div class="team-photo"><img src="head.jpeg" alt="Crusader Head"></div>
+          <div class="team-name">Aaban Alam</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="head1.jpeg" alt="Crusader Head"></div>
+          <div class="team-name">Eeshvi Sabharwal</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="head2.jpeg" alt="Crusader Head"></div>
+          <div class="team-name">Siddhika Agarwal</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"></div>
+          <div class="team-name">Arnav Srivastava</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="head4.jpeg" alt="Crusader Head"></div>
+          <div class="team-name">Riddhima Dwivedi</div>
+        </div>
+        <!-- Other Members -->
+        <div class="team-member">
+          <div class="team-photo"><img src="head3.jpeg" alt="Crusader Head"></div>
+          <div class="team-name">Navya Jain</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_3969.jpeg" alt="Crusader"></div>
+          <div class="team-name">Alviya Haq</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_3985.jpeg" alt="Crusader"></div>
+          <div class="team-name">Arham Rizwan</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_4007.jpeg" alt="Crusader"></div>
+          <div class="team-name">Isra Haq</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_3995.jpeg" alt="Crusader"></div>
+          <div class="team-name">Bazmi Fatima</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_4004.jpeg" alt="Crusader"></div>
+          <div class="team-name">Sakina Fatima</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_4006.jpeg" alt="Crusader"></div>
+          <div class="team-name">Vidita Khandelwal</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_4001.jpeg" alt="Crusader"></div>
+          <div class="team-name">Moosa Irshad</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_4026.png" alt="Crusader"></div>
+          <div class="team-name">Abubakr Siddique</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"></div>
+          <div class="team-name">Yashasvi Gaur</div>
+        </div>
+        <div class="team-member">
+          <div class="team-photo"><img src="IMG_3975.jpeg" alt="Crusader"></div>
+          <div class="team-name">Raed Adil</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-section reveal" style="margin-top: 80px;" id="batch-2025">
       <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-bottom: 30px; text-align: center;">
         2025 Batch Of Crusaders</h3>
       <div class="team-group-photo">
@@ -1630,7 +1741,7 @@
           </div>
           <div class="form-row">
             <label>Email Address</label>
-            <input type="email" name="email" placeholder="you@school.edu" required>
+            <input type="email" name="email" placeholder="name@gmail.com" required>
           </div>
           <div class="form-row">
             <label>How would you like to help?</label>
@@ -1765,7 +1876,7 @@
               <path
                 d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
             </svg>
-            Mail us at: empower.her.bhis@gmail.com
+            Mail us at: empowerher.for.women@gmail.com
           </a>
           <div style="display: flex; align-items: center; gap: 8px; color: rgba(255, 255, 255, 0.6); font-size: 14px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
@@ -1826,6 +1937,48 @@
       document.body.style.overflow = '';
     }
     window.addEventListener('resize', closeAllCards);
+
+    // Staggered Reveal & Magnetic Effects
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize VanillaTilt for team photos
+      VanillaTilt.init(document.querySelectorAll(".team-photo"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+        scale: 1.05
+      });
+
+      // Staggered reveal for grids
+      const observerOptions = {
+        threshold: 0.1
+      };
+
+      const staggeredObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const children = entry.target.querySelectorAll('.team-member, .stat-item, .resource-card');
+            children.forEach((child, index) => {
+              setTimeout(() => {
+                child.style.opacity = '1';
+                child.style.transform = 'translateY(0)';
+              }, index * 100);
+            });
+            staggeredObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.team-grid, .stats-grid, .resources-grid').forEach(grid => {
+        // Pre-set styles for transition
+        grid.querySelectorAll('.team-member, .stat-item, .resource-card').forEach(child => {
+          child.style.opacity = '0';
+          child.style.transform = 'translateY(30px)';
+          child.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+        });
+        staggeredObserver.observe(grid);
+      });
+    });
 
     // Sparkle Trail Effect (Desktop only)
     if (window.matchMedia("(hover: hover)").matches) {

@@ -127,6 +127,16 @@
       transform: translateY(-1px);
     }
 
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--charcoal);
+      cursor: pointer;
+      padding: 5px;
+      z-index: 1001;
+    }
+
     /* ── HERO ── */
     #hero {
       min-height: 100vh;
@@ -1173,35 +1183,86 @@
         font-size: 20px !important;
       }
 
-      .team-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 15px !important;
+      /* Mobile Core Team (1 column) */
+      #core-team .team-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
       }
 
-      .team-photo {
-        width: 100px !important;
-        height: 100px !important;
+      #core-team .team-photo {
+        width: 160px !important;
+        height: 160px !important;
       }
 
-      .team-name {
-        font-size: 13px !important;
+      #core-team .team-name {
+        font-size: 20px !important;
       }
 
-      header {
-        padding: 15px 20px;
+      /* Mobile Volunteers (2 columns) */
+      #volunteers .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+      }
+
+      #volunteers .team-photo {
+        width: 130px !important;
+        height: 130px !important;
+      }
+
+      #volunteers .team-name {
+        font-size: 15px !important;
       }
 
       .nav-logo {
         font-size: 18px;
       }
 
-      .nav-cta {
-        padding: 8px 16px;
-        font-size: 11px;
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .desktop-cta {
+        display: none;
       }
 
       .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 20px;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        list-style: none;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+      }
+
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+      }
+
+      .mobile-only-cta {
+        display: block !important;
+        margin-top: 20px;
+      }
+
+      .nav-logo {
+        z-index: 1001;
+      }
+
+      nav {
+        padding: 15px 20px;
+        height: 60px;
       }
 
       #hero {
@@ -1337,15 +1398,23 @@
       <img src="empowerher_t.png" alt="EmpowerHer Logo" class="logo-img">
       EmpowerHer
     </a>
-    <ul class="nav-links">
+    <button class="mobile-menu-btn" onclick="toggleMenu()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#pillars">Our Mission</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#involve">Get Involved</a></li>
       <li><a href="#resources">Resources</a></li>
+      <li class="mobile-only-cta"><a href="#involve" class="nav-cta">Join Us</a></li>
     </ul>
-    <a class="nav-cta" href="#involve">Join Us</a>
+    <a class="nav-cta desktop-cta" href="#involve">Join Us</a>
   </nav>
 
   <!-- HERO -->
@@ -1606,7 +1675,7 @@
       <h2 class="section-title">Meet the <em>Team</em></h2>
     </div>
 
-    <div class="team-section reveal">
+    <div class="team-section reveal" id="core-team">
       <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 30px; text-align: center;">
         Core Team</h3>
       <div class="team-grid">
@@ -1627,7 +1696,7 @@
         </div>
       </div>
     </div>
-    <div class="team-section reveal" style="margin-top: 80px;">
+    <div class="team-section reveal" style="margin-top: 80px;" id="volunteers">
       <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 30px; text-align: center;">
         2026 BHIS Round Volunteers</h3>
       <div class="team-grid">
@@ -1977,6 +2046,18 @@
           child.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
         });
         staggeredObserver.observe(grid);
+      });
+    });
+
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('active');
       });
     });
 

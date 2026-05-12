@@ -1248,9 +1248,26 @@
 
     /* ── COOKIE ANIMATION ── */
     @keyframes cookieFly {
-      0% { transform: scale(0) translate(-50%, -50%); opacity: 0; left: 50%; top: 50%; }
-      20% { transform: scale(1.5) translate(-50%, -50%); opacity: 1; left: 50%; top: 50%; }
-      100% { transform: scale(0.5) translate(100px, 100px); opacity: 0; left: 80%; top: 80%; }
+      0% {
+        transform: scale(0) translate(-50%, -50%);
+        opacity: 0;
+        left: 50%;
+        top: 50%;
+      }
+
+      20% {
+        transform: scale(1.5) translate(-50%, -50%);
+        opacity: 1;
+        left: 50%;
+        top: 50%;
+      }
+
+      100% {
+        transform: scale(0.5) translate(100px, 100px);
+        opacity: 0;
+        left: 80%;
+        top: 80%;
+      }
     }
 
     .flying-cookie {
@@ -1828,7 +1845,7 @@
           <div class="team-role">Co-Founder</div>
         </div>
         <div class="team-member">
-          <div class="team-photo"></div>
+          <div class="team-photo"><img src="aarohi.jpeg" alt="0"></div>
           <div class="team-name">Aarohi Shukla</div>
           <div class="team-role">Co-Founder</div>
         </div>
@@ -1852,14 +1869,13 @@
           <div class="team-name">Siddhika Agarwal</div>
         </div>
         <div class="team-member">
-          <div class="team-photo"><img src="" alt="20"></div>
+          <div class="team-photo"><img src="arnav.jpeg" alt="20"></div>
           <div class="team-name">Arnav Srivastava</div>
         </div>
         <div class="team-member">
           <div class="team-photo"><img src="head4.jpeg" alt="4"></div>
           <div class="team-name">Riddhima Dwivedi</div>
         </div>
-        <!-- Other Members -->
         <div class="team-member">
           <div class="team-photo"><img src="head3.jpeg" alt="5"></div>
           <div class="team-name">Navya Jain</div>
@@ -1906,10 +1922,10 @@
         </div>
         <div class="team-member">
           <div class="team-photo"><img src="" alt="16"></div>
-          <div class="team-name">Dhanya Kesarwani</div>
+          <div class="team-name"></div>
         </div>
         <div class="team-member">
-          <div class="team-photo"><img src="" alt="17"></div>
+          <div class="team-photo"><img src="aalim.jpeg" alt="17"></div>
           <div class="team-name">Aalim Khan</div>
         </div>
         <div class="team-member">
@@ -1917,7 +1933,7 @@
           <div class="team-name">Abubakr Siddique</div>
         </div>
         <div class="team-member">
-          <div class="team-photo"><img src="" alt="19"></div>
+          <div class="team-photo"><img src="hammad.jpeg" alt="19"></div>
           <div class="team-name">Hammad Ali beig</div>
         </div>
       </div>
@@ -2212,14 +2228,14 @@
     // Cookie Logic
     function handleCookie(accepted) {
       const overlay = document.getElementById('cookie-overlay');
-      
+
       if (accepted) {
         // Create the cookie animation
         const cookie = document.createElement('div');
         cookie.className = 'flying-cookie';
         cookie.innerHTML = '🍪';
         document.body.appendChild(cookie);
-        
+
         setTimeout(() => cookie.remove(), 1500);
       }
 
